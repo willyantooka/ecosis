@@ -1,0 +1,49 @@
+:root {
+  --azul-escuro: #12304d;
+  --azul-claro: #e1eef7;
+  --azul-link: #1a6fa8;
+  --verde: #146347;
+  --verde-claro: #e3f3ea;
+  --vermelho: #c62f2f;
+  --fundo: #f4f8fa;
+  --branco: #ffffff;
+  --texto: #16324f;
+  --cinza: #5b6b7a;
+  --borda: #dbe4ea;
+  --sombra: 0 2px 8px rgba(18, 48, 77, 0.06);
+  --sombra-forte: 0 8px 24px rgba(18, 48, 77, 0.12);
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: "Segoe UI", system-ui, -apple-system, sans-serif;
+  background: var(--fundo);
+  color: var(--texto);
+  line-height: 1.5;
+}
+
+button, input, select { font-family: inherit; }
+
+.eyebrow {
+  display: block;
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--azul-link);
+}
+
+.btn {
+  width: 100%;
+  padding: 0.9rem;
+  border: 0;
+  border-radius: 8px;
+  background: var(--verde);
+  color: #fff;
+  font-weight: 700;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.15s;
+}
+.btn:hover { background: #0e4d37; }

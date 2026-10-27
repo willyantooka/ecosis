@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSis · Início</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body>
+  <div class="app">
+
+    <header class="topo">
+      <div>
+        <small class="eyebrow" id="unidade-topo">Apartamento 84</small>
+        <h1 id="saudacao">Boa tarde, Marina</h1>
+      </div>
+      <span class="avatar" id="avatar">MR</span>
+    </header>
+
+    <section class="boas-vindas">
+      <span class="tag" id="perfil">Perfil: Morador</span>
+      <h2>Bem-vindo(a) ao EcoSis</h2>
+      <p>Seu painel mostra somente os recursos disponíveis para sua função.</p>
+    </section>
+
+    <section class="atualizacoes">
+      <small class="eyebrow">Atualizações</small>
+      <div class="titulo-linha">
+        <h3>Acontecendo agora</h3>
+        <a href="avisos.html" class="ver">Ver avisos</a>
+      </div>
+
+      <div class="cards">
+        <a class="card card--largo" href="avisos.html"
+           data-perfis="morador sindico funcionario porteiro conselheiro">
+          <span class="icone">!</span>
+          <div>
+            <span class="tag">2 novos</span>
+            <strong>Avisos recentes</strong>
+            <p>Manutenção do elevador e assembleia do condomínio.</p>
+          </div>
+          <span class="seta">→</span>
+        </a>
+
+        <a class="card" href="mural.html" data-perfis="morador sindico conselheiro">
+          <span class="icone">▦</span>
+          <strong>Mural de serviços</strong>
+          <p>Encontre indicações dos vizinhos.</p>
+        </a>
+
+        <a class="card" href="portaria.html"
+           data-perfis="morador sindico funcionario porteiro">
+          <span class="icone">▢</span>
+          <strong>Portaria</strong>
+          <p>Encomendas, visitantes e acessos.</p>
+        </a>
+
+        <a class="card" href="chat.html" data-perfis="morador sindico conselheiro">
+          <span class="icone">◎</span>
+          <strong>Chat do condomínio</strong>
+          <p>Converse com outros moradores.</p>
+        </a>
+      </div>
+    </section>
+
+    <button class="panico" id="panico" type="button">
+      <span>⚠</span>
+      Pânico
+    </button>
+
+    <nav class="menu">
+      <a href="inicio.html" class="ativo"><span>⌂</span>Início</a>
+      <a href="avisos.html"><span>!</span>Avisos</a>
+      <a href="mural.html" data-perfis="morador sindico conselheiro"><span>▦</span>Mural</a>
+      <a href="chat.html" data-perfis="morador sindico conselheiro"><span>◎</span>Chat</a>
+      <a href="ajustes.html"><span>⚙</span>Ajustes</a>
+    </nav>
+
+  </div>
+
+  <!-- Modal do pânico -->
+<div class="modal-fundo" id="modal-panico" hidden>
+  <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-titulo">
+    <div class="modal__topo">
+      <h2 id="modal-titulo">Acionar alerta de emergência?</h2>
+      <button type="button" class="modal__fechar" id="modal-fechar" aria-label="Fechar">×</button>
+    </div>
+
+    <div class="modal__corpo">
+      <span class="modal__icone">!</span>
+      <p>Ao confirmar, a portaria será avisada imediatamente e receberá a identificação do seu apartamento.</p>
+    </div>
+
+    <div class="modal__acoes">
+      <button type="button" class="btn-contorno" id="modal-cancelar">Cancelar</button>
+      <button type="button" class="btn-perigo" id="modal-confirmar">Confirmar</button>
+    </div>
+  </div>
+</div>
+
+<!-- Aviso depois de confirmar -->
+<div class="toast" id="toast" role="status" hidden>✓ Alerta enviado. A portaria já foi avisada.</div>
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/inicio.js"></script>
+</body>
+</html>

@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSis Condomínio · Acesso</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/login.css">
+</head>
+<body>
+  <main class="login">
+
+    <section class="login__hero">
+      <img src="img/Captura de tela 2026-10-26 213339.png" alt="EcoSis Condomínio" class="logo-img">
+      <small class="eyebrow">EcoSis Condomínio</small>
+      <h1>Tudo do seu condomínio em um só lugar.</h1>
+      <p>Acompanhe avisos, encomendas, serviços e chamados com simplicidade.</p>
+    </section>
+
+    <section class="login__form">
+      <div class="login__conteudo">
+        <small class="eyebrow">Acesso do morador</small>
+        <h2>Olá, que bom ter você aqui</h2>
+        <p class="sub">Entre com sua identificação.</p>
+
+        <form id="form-login">
+          <label for="cargo">Cargo no condomínio</label>
+          <select id="cargo">
+            <option value="morador">Morador</option>
+            <option value="sindico">Síndico</option>
+            <option value="funcionario">Funcionário</option>
+            <option value="porteiro">Porteiro</option>
+            <option value="conselheiro">Conselheiro</option>
+        </select>
+
+          <label for="unidade">Bloco / unidade</label>
+          <input id="unidade" type="text" value="Bloco A · Apto 84">
+
+          <label for="email">E-mail</label>
+          <input id="email" type="email" value="morador@ecosis.com">
+
+          <label for="senha">Senha</label>
+          <div class="campo-senha">
+            <input id="senha" type="password" value="123456">
+            <button type="button" id="mostrar-senha">Mostrar</button>
+          </div>
+
+          <button type="submit" class="btn">Entrar</button>
+          <a href="#" class="ajuda">Preciso de ajuda para entrar</a>
+        </form>
+
+        <fieldset>
+          <legend>Acessibilidade</legend>
+          <label class="opcao" for="contraste">
+            <span>Alto contraste</span>
+            <input type="checkbox" id="contraste" class="switch">
+          </label>
+          <label class="opcao" for="texto">
+            <span>Texto ampliado</span>
+            <input type="checkbox" id="texto" class="switch">
+          </label>
+        </fieldset>
+      </div>
+    </section>
+
+  </main>
+
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/login.js"></script>
+</body>
+</html>
