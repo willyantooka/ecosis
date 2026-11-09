@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSis · Avisos</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-acesso="morador sindico funcionario porteiro conselheiro">
+  <div class="app">
+
+    <header class="topo">
+      <div>
+        <small class="eyebrow">Fique por dentro</small>
+        <h1>Central de avisos</h1>
+      </div>
+      <span class="avatar" id="avatar">MR</span>
+    </header>
+
+    <section class="acoes-topo">
+      <button type="button" class="pilula" id="ouvir">
+        <svg viewBox="0 0 24 24" width="16" height="16" fill="none" stroke="currentColor"
+            stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <polygon points="11 5 6 9 2 9 2 15 6 15 11 19 11 5"/>
+        <path d="M15.54 8.46a5 5 0 0 1 0 7.07"/>
+        <path d="M19.07 4.93a10 10 0 0 1 0 14.14"/>
+        </svg>
+    Ouvir avisos
+    </button>
+      <button type="button" class="pilula" id="marcar">✓ Marcar como lidos</button>
+    </section>
+
+    <section class="central" id="central"></section>
+
+    <a href="chamados.html" class="fab" data-perfis="morador sindico conselheiro">+ Novo alerta ao síndico</a>
+
+    <nav class="menu">
+      <a href="inicio.html"><span>⌂</span>Início</a>
+      <a href="avisos.html" class="ativo"><span>!</span>Avisos</a>
+      <a href="mural.html" data-perfis="morador sindico conselheiro"><span>▦</span>Mural</a>
+      <a href="portaria.html" data-perfis="morador sindico funcionario porteiro"><span>▢</span>Portaria</a>
+      <a href="chamados.html" data-perfis="morador sindico conselheiro"><span>◇</span>Chamados</a>
+      <a href="ajustes.html"><span>⚙</span>Ajustes</a>
+    </nav>
+
+  </div>
+
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/avisos.js"></script>
+</body>
+</html>

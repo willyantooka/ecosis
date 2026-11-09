@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>EcoSis · Chamados</title>
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/app.css">
+</head>
+<body data-acesso="morador sindico conselheiro">
+  <div class="app">
+
+    <header class="topo">
+      <div>
+        <small class="eyebrow">Fale com o síndico</small>
+        <h1>Chamados de manutenção</h1>
+      </div>
+      <span class="avatar" id="avatar">MR</span>
+    </header>
+
+    <section class="coluna">
+
+      <div class="banner-ajuda">
+        <span class="icone">◇</span>
+        <div>
+          <strong>Encontrou algum problema?</strong>
+          <p>Descreva a situação e acompanhe a resolução pelo histórico.</p>
+        </div>
+      </div>
+
+      <form class="form-chamado" id="form-chamado">
+        <label for="local">Onde está o problema?</label>
+        <select id="local">
+          <option>Área comum</option>
+          <option>Meu apartamento</option>
+          <option>Garagem</option>
+          <option>Elevador</option>
+          <option>Portaria</option>
+          <option>Outro</option>
+        </select>
+
+        <label for="descricao">Descrição</label>
+        <textarea id="descricao" maxlength="300" required
+          placeholder="Conte o que aconteceu, onde e quando..."></textarea>
+        <span class="contador" id="contador">0/300 caracteres</span>
+
+        <input type="file" id="arquivo" accept="image/*,audio/*" hidden>
+        <button type="button" class="anexo" id="anexo">+ Adicionar foto ou gravação de voz</button>
+
+        <button type="submit" class="btn">Enviar para o síndico</button>
+        <p class="confirmacao" id="confirmacao" role="status" hidden>
+          ✓ Chamado enviado! Acompanhe pelo histórico.
+        </p>
+      </form>
+
+      <button type="button" class="historico-toggle" id="historico-toggle" aria-expanded="false">
+        <span>
+          <strong>Visualizar histórico</strong>
+          <small>Acompanhe seus chamados anteriores</small>
+        </span>
+        <span class="seta-hist">→</span>
+      </button>
+
+      <div class="historico" id="historico" hidden></div>
+
+    </section>
+
+    <nav class="menu">
+      <a href="inicio.html"><span>⌂</span>Início</a>
+      <a href="avisos.html"><span>!</span>Avisos</a>
+      <a href="mural.html" data-perfis="morador sindico conselheiro"><span>▦</span>Mural</a>
+      <a href="portaria.html" data-perfis="morador sindico funcionario porteiro"><span>▢</span>Portaria</a>
+      <a href="chamados.html" class="ativo" data-perfis="morador sindico conselheiro"><span>◇</span>Chamados</a>
+      <a href="ajustes.html"><span>⚙</span>Ajustes</a>
+    </nav>
+
+  </div>
+
+  <script src="js/acessibilidade.js"></script>
+  <script src="js/comum.js"></script>
+  <script src="js/chamados.js"></script>
+</body>
+</html>
